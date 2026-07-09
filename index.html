@@ -1,11 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carl Cañuto — Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    HEY
+
+<div class="drawer-rail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="mark">Your<span class="mark-dot">·</span></a>
+    <nav class="catalog-nav" aria-label="Primary">
+      <button class="nav-tab active" data-target="#work">Work</button>
+      <button class="nav-tab" data-target="#about">About</button>
+      <button class="nav-tab" data-target="#skills">Index</button>
+      <button class="nav-tab" data-target="#contact">Contact</button>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="card-tab">
+        <span class="tab-code">CAT. NO. 001</span>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Personal Archive — Template</p>
+        <h1 class="hero-title">Your Name</h1>
+        <p class="hero-role">Role / Specialty</p>
+        <p class="hero-desc">
+          Use this space to introduce yourself, your work, or your creative practice.
+          Replace the sample copy with your own project highlights and details.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">Browse the collection</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <span>ON&nbsp;FILE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section work-section">
+    <div class="section-head">
+      <span class="section-code">DRAWER 01</span>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-note">Six entries, pulled from the drawer. Hover to slide one out.</p>
+    </div>
+
+    <div class="card-grid" id="cardGrid">
+      <!-- Cards injected by script.js -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="section-head">
+      <span class="section-code">DRAWER 02</span>
+      <h2 class="section-title">About the Archivist</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-portrait" aria-hidden="true">
+        <div class="portrait-frame">
+          <span class="portrait-code">FIG. A</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="about-lede">
+          This section is a flexible place to share your background, approach, and interests.
+        </p>
+        <p>
+          Replace this text with a short biography, your experience, or a summary of the work you want to highlight.
+        </p>
+        <p>
+          You can also add personal details, values, or a note about what you are currently working on.
+        </p>
+
+        <dl class="fact-sheet">
+          <div class="fact-row">
+            <dt>Location</dt><dd>Your City</dd>
+          </div>
+          <div class="fact-row">
+            <dt>Focus</dt><dd>Your specialty</dd>
+          </div>
+          <div class="fact-row">
+            <dt>Status</dt><dd>Available / Open to work</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS / INDEX -->
+  <section id="skills" class="section skills-section">
+    <div class="section-head">
+      <span class="section-code">DRAWER 03</span>
+      <h2 class="section-title">Subject Index</h2>
+      <p class="section-note">Tools and disciplines, filed alphabetically by category.</p>
+    </div>
+
+    <div class="index-columns" id="indexColumns">
+      <!-- Injected by script.js -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="contact-card">
+      <div class="card-tab">
+        <span class="tab-code">CAT. NO. 004</span>
+      </div>
+      <h2 class="section-title">Request an Entry</h2>
+      <p class="section-note">
+        Have a project, or just want to talk shop? Fill out the slip below.
+      </p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit slip</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-alt">
+        <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+        <div class="social-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Dribbble</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Your Name. Filed under: design, code, curiosity.</p>
+  <a href="#top" class="back-to-top">Back to top ↑</a>
+</footer>
+
+<div class="card-modal" id="cardModal" aria-hidden="true">
+  <div class="card-modal-inner">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
